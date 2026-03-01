@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -416,13 +417,14 @@
             font-weight: 600;
         }
 
-        .table-scroll { overflow-x: auto; }
+        .table-scroll { overflow-x: auto; width: 100%; }
 
         table {
             width: 100%;
             border-collapse: collapse;
             font-size: 0.83em;
-            min-width: 860px;
+            min-width: 100%;
+            table-layout: fixed;
         }
 
         thead th {
@@ -436,6 +438,7 @@
             background: var(--surface);
             border-bottom: 1.5px solid var(--border);
             white-space: nowrap;
+            width: calc(100% / 11);
         }
 
         tbody td {
@@ -444,6 +447,8 @@
             color: var(--text-2);
             font-family: var(--mono);
             white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         tbody tr:last-child td { border-bottom: none; }
