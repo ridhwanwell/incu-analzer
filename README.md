@@ -439,8 +439,8 @@
             min-width: 80px;
         }
 
-        thead th:first-child { min-width: 90px; width: 90px; }
-        thead th:nth-child(2) { min-width: 85px; width: 85px; }
+        thead th:first-child { min-width: 75px; width: 75px; }
+        thead th:nth-child(2) { min-width: 70px; width: 70px; }
 
         tbody td {
             padding: 10px 14px;
