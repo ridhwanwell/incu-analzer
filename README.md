@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -65,6 +66,7 @@
         .page {
             margin-left: 6px;
             padding: 36px 40px 60px;
+            max-width: 1380px;
             width: calc(100% - 6px);
         }
 
@@ -417,38 +419,35 @@
             font-weight: 600;
         }
 
-        .table-scroll { overflow-x: auto; width: 100%; }
+        .table-scroll { overflow-x: auto; }
 
         table {
             width: 100%;
             border-collapse: collapse;
             font-size: 0.83em;
-            table-layout: fixed;
         }
 
         thead th {
-            padding: 11px 10px;
+            padding: 12px 14px;
             text-align: left;
             font-weight: 600;
             font-size: 0.75em;
             text-transform: uppercase;
-            letter-spacing: 0.04em;
+            letter-spacing: 0.05em;
             color: var(--text-3);
             background: var(--surface);
             border-bottom: 1.5px solid var(--border);
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
+            min-width: 80px;
         }
 
+        thead th:first-child { min-width: 100px; }
+        thead th:nth-child(2) { min-width: 90px; }
+
         tbody td {
-            padding: 10px 10px;
+            padding: 10px 14px;
             border-bottom: 1px solid var(--border);
             color: var(--text-2);
             font-family: var(--mono);
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
         }
 
         tbody tr:last-child td { border-bottom: none; }
