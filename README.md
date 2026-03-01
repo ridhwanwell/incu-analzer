@@ -65,7 +65,7 @@
         .page {
             margin-left: 6px;
             padding: 36px 40px 60px;
-            max-width: 1380px;
+            width: calc(100% - 6px);
         }
 
         /* ── HEADER ── */
@@ -391,6 +391,7 @@
             box-shadow: var(--shadow);
             overflow: hidden;
             margin-bottom: 28px;
+            width: 100%;
         }
 
         .table-head {
@@ -422,26 +423,26 @@
             width: 100%;
             border-collapse: collapse;
             font-size: 0.83em;
-            min-width: 100%;
             table-layout: fixed;
         }
 
         thead th {
-            padding: 11px 16px;
+            padding: 11px 10px;
             text-align: left;
             font-weight: 600;
-            font-size: 0.78em;
+            font-size: 0.75em;
             text-transform: uppercase;
-            letter-spacing: 0.06em;
+            letter-spacing: 0.04em;
             color: var(--text-3);
             background: var(--surface);
             border-bottom: 1.5px solid var(--border);
+            overflow: hidden;
+            text-overflow: ellipsis;
             white-space: nowrap;
-            width: calc(100% / 11);
         }
 
         tbody td {
-            padding: 10px 16px;
+            padding: 10px 10px;
             border-bottom: 1px solid var(--border);
             color: var(--text-2);
             font-family: var(--mono);
