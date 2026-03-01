@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -67,7 +66,6 @@
             margin-left: 6px;
             padding: 36px 40px 60px;
             max-width: 1380px;
-            width: calc(100% - 6px);
         }
 
         /* ── HEADER ── */
@@ -393,7 +391,6 @@
             box-shadow: var(--shadow);
             overflow: hidden;
             margin-bottom: 28px;
-            width: 100%;
         }
 
         .table-head {
@@ -419,35 +416,38 @@
             font-weight: 600;
         }
 
-        .table-scroll { overflow-x: auto; }
+        .table-scroll { overflow-x: auto; width: 100%; }
 
         table {
             width: 100%;
             border-collapse: collapse;
             font-size: 0.83em;
+            min-width: 100%;
+            table-layout: fixed;
         }
 
         thead th {
-            padding: 12px 14px;
+            padding: 11px 16px;
             text-align: left;
             font-weight: 600;
-            font-size: 0.75em;
+            font-size: 0.78em;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.06em;
             color: var(--text-3);
             background: var(--surface);
             border-bottom: 1.5px solid var(--border);
-            min-width: 80px;
+            white-space: nowrap;
+            width: calc(100% / 11);
         }
 
-        thead th:first-child { min-width: 100px; }
-        thead th:nth-child(2) { min-width: 90px; }
-
         tbody td {
-            padding: 10px 14px;
+            padding: 10px 16px;
             border-bottom: 1px solid var(--border);
             color: var(--text-2);
             font-family: var(--mono);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         tbody tr:last-child td { border-bottom: none; }
